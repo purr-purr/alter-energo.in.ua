@@ -1,0 +1,11 @@
+.container {
+  @include flex-align(center);
+  font-weight: 500;
+  height: 100%;
+  color: var(--white);
+
+  @include media-mobile {
+    width: fit-content;
+    padding-left: 20px;
+  }
+}

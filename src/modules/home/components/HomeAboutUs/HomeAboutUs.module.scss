@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  gap: 25px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.title {
+  flex-basis: 50%;
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  gap: 24px;
+  flex-basis: 50%;
+
+  & li {
+    flex-basis: 50%;
+  }
+}

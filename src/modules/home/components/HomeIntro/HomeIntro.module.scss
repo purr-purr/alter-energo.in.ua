@@ -1,0 +1,57 @@
+.container {
+  @include flex-justify(flex-end);
+  flex-direction: column;
+  min-height: 770px;
+  padding-bottom: 79px;
+  color: var(--white);
+  position: relative;
+  z-index: 0;
+
+  &:before {
+    @include overflow-background;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    background: url("../../assets/solar-panel.jpg") no-repeat center center;
+  }
+}
+
+.cards {
+  display: flex;
+  gap: 24px;
+  max-width: 1074px;
+  width: 100%;
+}
+
+.heading {
+  flex-grow: 1;
+  padding: 34px 40px;
+
+  h2 {
+    font-size: 50px;
+  }
+}
+
+.powerInfo {
+  width: 342px;
+  min-width: 342px;
+  list-style-type: none;
+
+  & li {
+    padding: 18px 40px;
+    width: 100%;
+    height: calc(50% - 8px);
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
