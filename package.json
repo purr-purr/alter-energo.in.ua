@@ -10,6 +10,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/joy": "^5.0.0-beta.28",
     "classnames": "^2.3.2",
     "dotenv": "^16.0.3",
     "file-loader": "^6.2.0",

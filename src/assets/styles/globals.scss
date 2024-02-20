@@ -3,6 +3,7 @@
 :root {
   --black: #000;
   --dark: #1B111D;
+  --dark-white: #FDFAF4;
   --white: #FFF;
   --primary: #FEAF00;
   --brown: #3C343C;
@@ -42,7 +43,7 @@ html {
 html,
 body {
   height: 100%;
-  background-color: var(--white);
+  background-color: var(--dark-white);
 }
 
 body {
@@ -78,23 +79,14 @@ p, a {
   }
 }
 
-.text-content {
-  margin-bottom: 150px;
-
-  @include media-mobile {
-    margin-bottom: 50px;
-  }
-
-  ul {
-    padding-left: 20px;
-  }
-
-  a {
-    text-decoration: underline;
-    text-decoration-color: var(--primary);
-  }
-}
-
 h1, h2, h3, h4, {
   font-weight: 700;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
 }

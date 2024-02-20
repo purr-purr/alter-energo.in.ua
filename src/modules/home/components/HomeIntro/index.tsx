@@ -12,12 +12,12 @@ import s from './HomeIntro.module.scss';
 const HomeIntro: FC = () => {
 	const introPowerInfo = [
 		{
-			value: powerInfo.TOTAL_CAPACITY,
+			value: powerInfo.totalCapacity,
 			unit: 'МВт',
 			description: messages.TOTAL_CAPACITY,
 		},
 		{
-			value: powerInfo.GREEN_TARIFF,
+			value: powerInfo.greenTariff,
 			unit: '¢',
 			description: messages.GREEN_TARIFF,
 		},
