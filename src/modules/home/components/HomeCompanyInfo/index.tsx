@@ -3,7 +3,7 @@ import { FC } from 'react';
 import Accordion from '@modules/common/components/Accordion';
 import ScreenBlock from '@modules/common/components/ScreenBlock';
 
-import { COMPANY_FULL_NAME, COMPANY_NAME } from '@utils/const';
+import { COMPANY_EDRPOU, COMPANY_FULL_NAME, COMPANY_NAME } from '@utils/const';
 import { messages } from '@utils/messages';
 
 import s from './HomeCompanyInfo.module.scss';
@@ -20,7 +20,7 @@ const HomeCompanyInfo: FC = () => {
 					{companyShotNameUpperCase}
 				</p>
 				<p>
-					<b>Код ЕГРПОУ:</b> 43234398
+					<b>Код ЕГРПОУ:</b> {COMPANY_EDRPOU}
 				</p>
 				<p>
 					<b>Дата реєстрації:</b> 2019-09-17

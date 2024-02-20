@@ -7,29 +7,37 @@ import s from './ScreenBlock.module.scss';
 const ScreenBlock: FC<{
 	children: ReactNode;
 	className?: string;
-	element?: 'nav' | 'article' | 'footer';
-	isLargeSize?: boolean;
+	frameClassName?: string;
+	element?: 'nav' | 'section' | 'footer';
+	isFullScreen?: boolean;
 	id?: string;
 }> = ({
 	children,
 	className,
-	element = 'article',
-	isLargeSize = false,
+	element = 'section',
+	frameClassName,
+	isFullScreen = false,
 	id,
 }) => {
-	const classNameList = cn(
-		s.container,
-		className && className,
-		isLargeSize && s[`container--large`],
+	const subElement = createElement(
+		'article',
+		{
+			className: cn(s.inner, className),
+		},
+		children,
 	);
 
 	return createElement(
 		element,
 		{
-			className: classNameList,
+			className: cn(
+				s.container,
+				frameClassName,
+				isFullScreen ? s[`container--large`] : className,
+			),
 			id: id,
 		},
-		children,
+		isFullScreen ? subElement : children,
 	);
 };
 

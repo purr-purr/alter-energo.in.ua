@@ -12,7 +12,7 @@ const Layout: FC<{ children: ReactNode }> = ({ children }) => {
 			<Meta />
 			<main className={s.container}>
 				<Header />
-				<section className={s.content}>{children}</section>
+				{children}
 				<Footer />
 			</main>
 		</>

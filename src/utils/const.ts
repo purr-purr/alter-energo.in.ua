@@ -6,7 +6,7 @@ export const APP_AUTHOR_FULL_SIGNATURE: string = `${APP_AUTHOR} => ${APP_AUTHOR_
 export const APP_LINK: string = 'https://alter-energo.in.ua/';
 export const COMPANY_NAME: string[] = ['Альтер-Енерго', 'Девелопмент'];
 export const COMPANY_FULL_NAME: string = `ТОВ “${COMPANY_NAME[0]}-${COMPANY_NAME[1]}”`;
-export const COMPANY_EDRPOU: string = 'код ЄДРПОУ 43234398';
+export const COMPANY_EDRPOU: string = '43234398';
 export const COMPANY_PHONE: string = '+380504493747';
 export const COMPANY_EMAIL: string = 'yar.s93@gmail.com';
 export const COMPANY_ADDRESS: string =

@@ -43,7 +43,7 @@ const HomeTechInfo: FC = () => {
 	];
 
 	return (
-		<ScreenBlock isLargeSize className={s.container}>
+		<ScreenBlock isFullScreen className={s.container} frameClassName={s.frame}>
 			<div className={s.info}>
 				<BlockTitle className={s.title} title={messages.LAUNCHED_IN_2020} />
 				<ul className={s[`info-list`]}>

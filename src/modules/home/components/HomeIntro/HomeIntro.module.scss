@@ -4,6 +4,9 @@
   min-height: 770px;
   padding-bottom: 79px;
   color: var(--white);
+}
+
+.frame {
   position: relative;
   z-index: 0;
 
@@ -28,6 +31,33 @@
 
   h2 {
     font-size: 50px;
+  }
+
+  span {
+    position: relative;
+    display: inline-block;
+    text-indent: 153px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 138px;
+      height: 55px;
+      border-radius: 30px;
+      background: url('../../assets/sunshine.jpg'), lightgray no-repeat;
+      animation: levitate 3s infinite alternate;
+    }
+  }
+}
+
+@keyframes levitate {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -11px;
   }
 }
 

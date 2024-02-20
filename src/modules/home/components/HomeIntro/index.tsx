@@ -24,7 +24,7 @@ const HomeIntro: FC = () => {
 	];
 
 	return (
-		<ScreenBlock className={s.container} isLargeSize>
+		<ScreenBlock className={s.container} isFullScreen frameClassName={s.frame}>
 			<div className={s.cards}>
 				<Card className={s.heading} type="div">
 					<h2>

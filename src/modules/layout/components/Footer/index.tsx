@@ -9,7 +9,12 @@ const Footer = () => {
 	const currentYear = new Date().getFullYear();
 
 	return (
-		<ScreenBlock className={s.container} element="footer" isLargeSize>
+		<ScreenBlock
+			className={s.container}
+			element="footer"
+			isFullScreen
+			frameClassName={s.frame}
+		>
 			<p>
 				{currentYear}/{messages.ALL_RIGHTS_RESERVED}
 			</p>

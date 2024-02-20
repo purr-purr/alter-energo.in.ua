@@ -21,7 +21,12 @@ import s from './HomeContacts.module.scss';
 
 const HomeAboutUs: FC = () => {
 	return (
-		<ScreenBlock className={s.container} id="contacts" isLargeSize>
+		<ScreenBlock
+			className={s.container}
+			id="contacts"
+			isFullScreen
+			frameClassName={s.frame}
+		>
 			<BlockTitle
 				className={s.title}
 				title={messages.ALWAYS_IN_TOUCH_WITH_GREEN_ENERGY}

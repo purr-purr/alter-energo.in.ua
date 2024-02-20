@@ -1,9 +1,13 @@
 .container {
   display: flex;
-  position: relative;
-  z-index: 0;
+  gap: 25px;
   padding-top: 100px;
   padding-bottom: 32px;
+}
+
+.frame {
+  position: relative;
+  z-index: 0;
 
   &:before {
     @include overflow-background;
@@ -47,6 +51,7 @@
   @include flex-align(center);
   gap: 4px;
   padding-right: 80px;
+  font-weight: 500;
 
   @include media-laptop {
     padding-right: 0;

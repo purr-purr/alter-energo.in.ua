@@ -5,8 +5,3 @@ export interface IAppNavigation {
 		[key: string]: string;
 	}[];
 }
-
-export interface IDocsList {
-	title: string;
-	path: string;
-}

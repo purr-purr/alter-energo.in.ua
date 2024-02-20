@@ -2,8 +2,7 @@
   @include flex-justify-align(space-between, center);
   padding-top: 24px;
   padding-bottom: 24px;
-  background-color: var(--dark);
-
+  
   @include media-mobile {
     flex-direction: column;
     align-items: baseline;
@@ -11,8 +10,12 @@
   }
 
   p, a {
-    color: var(--white);
+    color: rgba(#fff, 0.5);
     font-size: 16px;
     font-weight: 500;
   }
+}
+
+.frame {
+  background-color: var(--dark);
 }
