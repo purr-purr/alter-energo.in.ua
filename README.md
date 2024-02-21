@@ -1,8 +1,8 @@
-# TentLait website
+# Alter-Energo LLC website
 
 #### `JavaScript / ReactJS / TypeScript / NextJS`
 
-# [https://tenlait.lviv.ua/](https://tenlait.lviv.ua/)
+# [https://alter-energo.in.ua/](https://alter-energo.in.ua/)
 
 ## Getting Started
 
@@ -21,6 +21,7 @@ result.
 
 ## Stack
 
+- React
 - Next.js
 - TypeScript
 
@@ -28,6 +29,8 @@ Also use:
 
 - Scss
 - ftp-deploy
+- MUI
+-
 
 ## Authors
 
