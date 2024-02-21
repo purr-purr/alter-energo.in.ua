@@ -11,6 +11,7 @@ const Footer = () => {
 	return (
 		<ScreenBlock
 			className={s.container}
+			subClassName={s.inner}
 			element="footer"
 			isFullScreen
 			frameClassName={s.frame}

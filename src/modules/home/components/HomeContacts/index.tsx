@@ -23,6 +23,7 @@ const HomeAboutUs: FC = () => {
 	return (
 		<ScreenBlock
 			className={s.container}
+			subClassName={s.inner}
 			id="contacts"
 			isFullScreen
 			frameClassName={s.frame}

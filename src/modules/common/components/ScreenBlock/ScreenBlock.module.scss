@@ -2,21 +2,26 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+
 
   @include media-mobile {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  &:not(&--large) {
-    max-width: 1560px;
-  }
+  //&:not(&--large) {
+  //  max-width: 1560px;
+  //}
 
-  &--large {
-    max-width: 1920px;
-  }
+  //&--large {
+  //  max-width: 1920px;
+  //}
+}
+
+.containerSize {
+  max-width: 1520px;
 }
 
 .inner {
@@ -24,8 +29,4 @@
   margin-right: auto;
   max-width: 1440px;
   width: 100%;
-}
-
-.frame {
-
 }

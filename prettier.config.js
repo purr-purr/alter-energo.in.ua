@@ -14,7 +14,6 @@ module.exports = {
 		'',
 		'^@modules/common/hooks(.*)$',
 		'',
-		'^@data/(.*)$',
 		'^@styles/(.*)$',
 		'^@utils/(.*)$',
 		'',

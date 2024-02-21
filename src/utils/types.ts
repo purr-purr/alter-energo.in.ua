@@ -1,7 +1,7 @@
-export interface IAppNavigation {
-	title: string;
-	path?: string;
-	group?: {
-		[key: string]: string;
-	}[];
+export interface IPowerData {
+	[key: string]: number;
+}
+
+export interface IMessageData {
+	[key: string]: string;
 }

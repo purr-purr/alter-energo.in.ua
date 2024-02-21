@@ -1,12 +1,10 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
+
+import type { IAccordionProps } from '@modules/common/components/Accordion/interface';
 
 import s from './Accordion.module.scss';
 
-const Accordion: FC<{
-	children: ReactNode;
-	title: string;
-	order: number;
-}> = ({ children, title, order }) => {
+const Accordion: FC<IAccordionProps> = ({ children, title, order }) => {
 	return (
 		<details className={s.container}>
 			<summary className={s.summary} data-order={`0${order}`}>

@@ -1,28 +1,24 @@
-import { createElement, FC, type ReactNode } from 'react';
+import { createElement, FC } from 'react';
 
+import type { IScreenBlockProps } from '@modules/common/components/ScreenBlock/interface';
 import cn from 'classnames';
 
 import s from './ScreenBlock.module.scss';
 
-const ScreenBlock: FC<{
-	children: ReactNode;
-	className?: string;
-	frameClassName?: string;
-	element?: 'nav' | 'section' | 'footer';
-	isFullScreen?: boolean;
-	id?: string;
-}> = ({
+const ScreenBlock: FC<IScreenBlockProps> = ({
 	children,
 	className,
 	element = 'section',
+	subElement = 'article',
 	frameClassName,
+	subClassName,
 	isFullScreen = false,
 	id,
 }) => {
-	const subElement = createElement(
-		'article',
+	const innerElement = createElement(
+		subElement,
 		{
-			className: cn(s.inner, className),
+			className: cn(s.inner, subClassName),
 		},
 		children,
 	);
@@ -31,13 +27,14 @@ const ScreenBlock: FC<{
 		element,
 		{
 			className: cn(
+				!isFullScreen && s.containerSize,
 				s.container,
+				className,
 				frameClassName,
-				isFullScreen ? s[`container--large`] : className,
 			),
 			id: id,
 		},
-		isFullScreen ? subElement : children,
+		isFullScreen ? innerElement : children,
 	);
 };
 

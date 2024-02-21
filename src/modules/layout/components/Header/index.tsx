@@ -14,15 +14,13 @@ const Header = () => {
 	const isMobile = useMediaQuery(MOBILE_BREAKPOINT);
 
 	return (
-		<header className={s.container}>
-			<ScreenBlock element="nav" className={s.inner}>
-				<Logo />
-				<HeaderContextWrapper>
-					<Nav />
-					{isMobile && <NavButton />}
-				</HeaderContextWrapper>
-			</ScreenBlock>
-		</header>
+		<ScreenBlock element="header" className={s.container}>
+			<Logo />
+			<HeaderContextWrapper>
+				<Nav />
+				{isMobile && <NavButton />}
+			</HeaderContextWrapper>
+		</ScreenBlock>
 	);
 };
 

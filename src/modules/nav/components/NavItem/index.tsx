@@ -2,16 +2,11 @@ import { FC, useContext } from 'react';
 import Link from 'next/link';
 
 import { HeaderContext } from '@modules/layout/context/HeaderContext';
+import type { INavItemProps } from '@modules/nav/components/NavItem/interface';
 
 import s from './NavItem.module.scss';
 
-interface INavPageItemProps {
-	title: string;
-	path: string;
-	onClick: () => void;
-}
-
-const NavItem: FC<INavPageItemProps> = ({ title, path, onClick }) => {
+const NavItem: FC<INavItemProps> = ({ title, path, onClick }) => {
 	const { handleMobileNavMode } = useContext(HeaderContext);
 
 	const handleLinkClick = () => {

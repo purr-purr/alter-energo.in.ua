@@ -1,6 +1,11 @@
 .container {
   margin-top: 200px;
   margin-bottom: 200px;
+
+  @include media-mobile {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
 }
 
 .primaryColor {

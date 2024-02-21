@@ -2,7 +2,6 @@ import { FC } from 'react';
 
 import Card from '@modules/common/components/Card';
 import ScreenBlock from '@modules/common/components/ScreenBlock';
-import cn from 'classnames';
 
 import { powerInfo } from '@utils/data';
 import { messages } from '@utils/messages';

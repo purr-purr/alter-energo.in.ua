@@ -3,25 +3,25 @@ import { FC } from 'react';
 import BlockTitle from '@modules/common/components/BlockTitle';
 import Card from '@modules/common/components/Card';
 import ScreenBlock from '@modules/common/components/ScreenBlock';
+import type { ITechInfo } from '@modules/home/components/HomeTechInfo/interface';
 import CircularProgress from '@mui/joy/CircularProgress';
 
+import { useMediaQuery } from '@modules/common/hooks';
+
+import { MOBILE_BREAKPOINT } from '@utils/const';
 import { powerPlants } from '@utils/data';
 import { messages } from '@utils/messages';
 
 import s from './HomeTechInfo.module.scss';
 
-interface ITechInfo {
-	title: string;
-	description: string;
-	value: number;
-	valuePercent: number;
-	symbol?: string;
-}
-
 const HomeTechInfo: FC = () => {
+	const isMobile = useMediaQuery(MOBILE_BREAKPOINT);
 	const getInsolationPercentage = (total: number, current: number) => {
 		return (total / current) * 10;
 	};
+
+	const widgetThickness = isMobile ? 8 : 11;
+	const widgetSize = isMobile ? 160 : 222;
 
 	const techInfo: ITechInfo[] = [
 		{
@@ -43,7 +43,12 @@ const HomeTechInfo: FC = () => {
 	];
 
 	return (
-		<ScreenBlock isFullScreen className={s.container} frameClassName={s.frame}>
+		<ScreenBlock
+			isFullScreen
+			className={s.container}
+			frameClassName={s.frame}
+			subClassName={s.inner}
+		>
 			<div className={s.info}>
 				<BlockTitle className={s.title} title={messages.LAUNCHED_IN_2020} />
 				<ul className={s[`info-list`]}>
@@ -60,9 +65,9 @@ const HomeTechInfo: FC = () => {
 					<Card key={item.title} className={s[`progressList-item`]}>
 						<CircularProgress
 							sx={{
-								'--CircularProgress-size': '222px',
-								'--CircularProgress-trackThickness': '11px',
-								'--CircularProgress-progressThickness': '11px',
+								'--CircularProgress-size': `${widgetSize}px`,
+								'--CircularProgress-trackThickness': `${widgetThickness}px`,
+								'--CircularProgress-progressThickness': `${widgetThickness}px`,
 							}}
 							determinate
 							variant="soft"

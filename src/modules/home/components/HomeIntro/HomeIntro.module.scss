@@ -4,17 +4,26 @@
   min-height: 770px;
   padding-bottom: 79px;
   color: var(--white);
+  margin-top: -64px;
+
+  @include media-mobile {
+    min-height: 555px;
+    margin-top: -60px;
+    padding-bottom: 24px;
+  }
 }
 
 .frame {
-  position: relative;
-  z-index: 0;
-
-  &:before {
-    @include overflow-background;
+  @include overflow-frame {
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
     background: url("../../assets/solar-panel.jpg") no-repeat center center;
+
+    @include media-mobile {
+      border-bottom-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
+
   }
 }
 
@@ -23,20 +32,40 @@
   gap: 24px;
   max-width: 1074px;
   width: 100%;
+
+  @include media-tablet {
+    flex-direction: column;
+  }
+
+  @include media-mobile {
+    gap: 16px;
+  }
 }
 
 .heading {
   flex-grow: 1;
   padding: 34px 40px;
 
+  @include media-mobile {
+    padding: 18px 20px;
+  }
+
   h2 {
     font-size: 50px;
+
+    @include media-mobile {
+      font-size: 34px;
+    }
   }
 
   span {
     position: relative;
     display: inline-block;
     text-indent: 153px;
+
+    @include media-mobile {
+      text-indent: 0;
+    }
 
     &:before {
       content: '';
@@ -48,6 +77,10 @@
       border-radius: 30px;
       background: url('../../assets/sunshine.jpg'), lightgray no-repeat;
       animation: levitate 3s infinite alternate;
+
+      @include media-mobile {
+        display: none;
+      }
     }
   }
 }
@@ -66,22 +99,51 @@
   min-width: 342px;
   list-style-type: none;
 
+  @include media-tablet {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+  }
+
+  @include media-mobile {
+    flex-direction: column;
+    gap: 16px;
+    min-width: auto;
+  }
+
   & li {
     padding: 18px 40px;
     width: 100%;
     height: calc(50% - 8px);
 
+    @include media-mobile {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 16px;
+
+      @include media-mobile {
+        margin-bottom: 0;
+      }
     }
   }
 
   h2 {
     font-size: 50px;
+
+    @include media-mobile {
+      font-size: 34px;
+    }
   }
 
   p {
     font-size: 20px;
     font-weight: 500;
+
+    @include media-mobile {
+      font-size: 16px;
+    }
   }
 }

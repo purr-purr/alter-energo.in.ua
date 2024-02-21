@@ -1,19 +1,30 @@
 .container {
-  display: flex;
-  gap: 25px;
   padding-top: 100px;
   padding-bottom: 32px;
+
+  @include media-mobile {
+    padding-top: 60px;
+  }
+}
+
+.inner {
+  display: flex;
+  gap: 24px;
+
+  @include media-tablet {
+    flex-wrap: wrap;
+  }
 }
 
 .frame {
-  position: relative;
-  z-index: 0;
-
-  &:before {
-    @include overflow-background;
+  @include overflow-frame {
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
-    background-color: var(--dark);
+
+    @include media-mobile {
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
   }
 }
 
@@ -21,10 +32,22 @@
   flex-basis: 50%;
   font-size: 50px;
   color: var(--primary);
+
+  @include media-tablet {
+    flex-basis: unset;
+  }
+
+  @include media-mobile {
+    font-size: 34px;
+  }
 }
 
 .info {
   flex-basis: 50%;
+
+  @include media-tablet {
+    flex-basis: unset;
+  }
 }
 
 .list {
@@ -33,6 +56,10 @@
   gap: 36px;
   margin-bottom: 40px;
   list-style-type: none;
+
+  @include media-mobile {
+    gap: 16px;
+  }
 
   & li {
     color: var(--white);
@@ -62,6 +89,10 @@
   width: 100%;
   height: 240px;
   overflow: hidden;
+
+  @include media-mobile {
+    height: 500px;
+  }
 
   &-frame {
     border: none;

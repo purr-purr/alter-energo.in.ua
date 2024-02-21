@@ -20,19 +20,32 @@
   }
 }
 
+@mixin media-tablet {
+  @media (max-width: $tablet-bp) {
+    @content;
+  }
+}
+
 @mixin media-mobile {
   @media (max-width: $mobile-bp) {
     @content;
   }
 }
 
-@mixin overflow-background {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+@mixin overflow-frame {
+  position: relative;
+  z-index: 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--dark);
+    @content;
+  }
 }

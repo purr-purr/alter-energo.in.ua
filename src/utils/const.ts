@@ -1,8 +1,8 @@
-export const MOBILE_BREAKPOINT: number = 1024;
+export const MOBILE_BREAKPOINT: number = 992;
 export const APP_AUTHOR: string = 'Anton Shaposhnikov';
 export const APP_AUTHOR_SIGNATURE: string = 'shaposhnikov.in';
 export const APP_AUTHOR_WEBSITE: string = `https://${APP_AUTHOR_SIGNATURE}/`;
-export const APP_AUTHOR_FULL_SIGNATURE: string = `${APP_AUTHOR} => ${APP_AUTHOR_WEBSITE} => shaposhnikov.web@gmail.com`;
+export const APP_AUTHOR_FULL_SIGNATURE: string = `Website Developer: ${APP_AUTHOR} => ${APP_AUTHOR_WEBSITE} => shaposhnikov.web@gmail.com`;
 export const APP_LINK: string = 'https://alter-energo.in.ua/';
 export const COMPANY_NAME: string[] = ['Альтер-Енерго', 'Девелопмент'];
 export const COMPANY_FULL_NAME: string = `ТОВ “${COMPANY_NAME[0]}-${COMPANY_NAME[1]}”`;

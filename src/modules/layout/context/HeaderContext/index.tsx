@@ -1,19 +1,23 @@
-import {createContext, FC, type ReactNode, useCallback, useState} from 'react';
-import {useMediaQuery} from "@modules/common/hooks";
-import {MOBILE_BREAKPOINT} from "@utils/const";
+import {
+	createContext,
+	FC,
+	useCallback,
+	useState,
+	type ReactNode,
+} from 'react';
 
-interface IHeaderContext {
-	isMobileNavMode: boolean;
-	handleMobileNavMode: (isDarkMode: boolean) => void;
-}
+import type { IHeaderContext } from '@modules/layout/context/HeaderContext/interface';
+
+import { useMediaQuery } from '@modules/common/hooks';
+
+import { MOBILE_BREAKPOINT } from '@utils/const';
 
 const HeaderContext = createContext<IHeaderContext>({
 	isMobileNavMode: false,
-	handleMobileNavMode: () => {
-	},
+	handleMobileNavMode: () => {},
 });
 
-const HeaderContextWrapper: FC<{ children: ReactNode }> = ({children}) => {
+const HeaderContextWrapper: FC<{ children: ReactNode }> = ({ children }) => {
 	const isMobile = useMediaQuery(MOBILE_BREAKPOINT);
 	const [isMobileNavMode, setIsMobileNavMode] = useState<boolean>(false);
 
@@ -37,4 +41,4 @@ const HeaderContextWrapper: FC<{ children: ReactNode }> = ({children}) => {
 	);
 };
 
-export {HeaderContextWrapper, HeaderContext};
+export { HeaderContextWrapper, HeaderContext };

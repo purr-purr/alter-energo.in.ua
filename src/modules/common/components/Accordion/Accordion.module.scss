@@ -1,7 +1,3 @@
-.container {
-
-}
-
 .summary {
   padding-top: 18px;
   padding-bottom: 18px;
@@ -13,6 +9,10 @@
   &:before, &:after {
     position: absolute;
     top: 20px;
+
+    @include media-mobile {
+      top: 18px;
+    }
   }
 
   &:before {
@@ -24,6 +24,10 @@
     content: '+';
     right: 0;
     font-size: 20px;
+
+    @include media-mobile {
+      font-size: 16px;
+    }
   }
 
   &:hover {
@@ -41,6 +45,13 @@
   margin-left: auto;
   font-weight: 600;
   font-size: 20px;
+
+  @include media-mobile {
+    width: 90%;
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .content {
@@ -50,8 +61,16 @@
   margin-top: 24px;
   margin-bottom: 24px;
 
+  @include media-mobile {
+    max-width: unset;
+  }
+
   p, h5 {
     margin-bottom: 20px;
+
+    @include media-mobile {
+      margin-bottom: 14px;
+    }
   }
 
   h5 {

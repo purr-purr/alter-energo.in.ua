@@ -13,8 +13,10 @@ import LOGO from '@public/assets/logo.svg';
 const Meta: FC<{
 	title?: string;
 }> = ({ title }) => {
-	const manifestPath: string = '/assets/manifest.webmanifest';
-	const metaTitle: string = title ? `${title} ${COMPANY_FULL_NAME}` : COMPANY_FULL_NAME;
+	const manifestPath: string = '/assets/site.webmanifest';
+	const metaTitle: string = title
+		? `${title} ${COMPANY_FULL_NAME}`
+		: COMPANY_FULL_NAME;
 	const metaDesc: string =
 		COMPANY_FULL_NAME +
 		' - команда висококваліфікованих експертів, які з метою' +

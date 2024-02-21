@@ -3,6 +3,16 @@
   gap: 25px;
   margin-top: 200px;
   margin-bottom: 200px;
+
+  @include media-tablet {
+    flex-direction: column;
+  }
+
+  @include media-mobile {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    gap: 16px;
+  }
 }
 
 .title {
@@ -14,6 +24,11 @@
   display: flex;
   gap: 24px;
   flex-basis: 50%;
+
+  @include media-tablet {
+    flex-basis: unset;
+    flex-direction: column;
+  }
 
   & li {
     flex-basis: 50%;
