@@ -89,7 +89,7 @@
   }
 
   &-circle {
-    color: var(--white);
+    color: var(--white) !important;
     font-weight: 700;
 
     @include media-mobile {

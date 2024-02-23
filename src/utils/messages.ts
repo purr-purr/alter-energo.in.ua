@@ -4,7 +4,6 @@ export const messages: IMessageData = {
 	SOLAR_ENERGY_FOR: 'Сонячна енергія для ',
 	PROGRESSIVE_FUTURE: 'прогресивного майбутнього',
 	TOTAL_CAPACITY: 'Загальна потужність',
-	GREEN_TARIFF: 'Зелений тариф',
 	PIONEERS_IN_THE_FIELD_OF:
 		'пионери у сфері відновлюваної енергетики на українському ринку з 2020 року.',
 	OUR_SOLAR_POWER_PLANTS:
@@ -19,6 +18,7 @@ export const messages: IMessageData = {
 		'Середньорічна сума глобального опромінення на квадратний метр, отримана модулями даної системи основі супутникових даних (кВт*год/м2)',
 	KVVP: 'КВВП',
 	INSOLATION: 'Инсоляція',
+	ENERGY_SOURCES: 'Джерела енергії',
 	INFORMATION_ABOUT_THE_COMPANY: 'Інформація про компанію',
 	INFORMATION_ABOUT_ENERGY_SOURCES: 'Інформація про джерела енергії',
 	ANNUAL_REPORTING: 'Річна звітність',

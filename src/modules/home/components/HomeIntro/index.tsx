@@ -11,14 +11,14 @@ import s from './HomeIntro.module.scss';
 const HomeIntro: FC = () => {
 	const introPowerInfo = [
 		{
+			value: powerInfo.solarPowerPlant,
+			unit: 'СЕС',
+			description: messages.ENERGY_SOURCES,
+		},
+		{
 			value: powerInfo.totalCapacity,
 			unit: 'МВт',
 			description: messages.TOTAL_CAPACITY,
-		},
-		{
-			value: powerInfo.greenTariff,
-			unit: '¢',
-			description: messages.GREEN_TARIFF,
 		},
 	];
 
@@ -34,7 +34,9 @@ const HomeIntro: FC = () => {
 				<ul className={s.powerInfo}>
 					{introPowerInfo.map((item) => (
 						<Card key={item.value}>
-							<h2>{item.value + ' ' + item.unit}</h2>
+							<h2>
+								{item.value} {item.unit && item.unit}
+							</h2>
 							<p>{item.description}</p>
 						</Card>
 					))}

@@ -1,7 +1,7 @@
 import type { IPowerData } from '@utils/types';
 
 export const powerInfo: IPowerData = {
-	greenTariff: 11.45,
+	solarPowerPlant: 2,
 	totalCapacity: 10.97,
 };
 
