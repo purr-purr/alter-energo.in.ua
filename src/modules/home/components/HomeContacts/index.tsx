@@ -47,12 +47,14 @@ const HomeAboutUs: FC = () => {
 						</a>
 					</li>
 
-					<li>
-						<a className={s.icon} href={`tel:${COMPANY_PHONE}`}>
-							<Image src={PHONE_ICON} alt={COMPANY_PHONE} />
-							{COMPANY_PHONE}
-						</a>
-					</li>
+					{/*//TODO Temporary hidden*/}
+
+					{/*<li>*/}
+					{/*	<a className={s.icon} href={`tel:${COMPANY_PHONE}`}>*/}
+					{/*		<Image src={PHONE_ICON} alt={COMPANY_PHONE} />*/}
+					{/*		{COMPANY_PHONE}*/}
+					{/*	</a>*/}
+					{/*</li>*/}
 
 					<li className={s.icon}>
 						<Image src={MAP_ICON} alt={COMPANY_ADDRESS} />

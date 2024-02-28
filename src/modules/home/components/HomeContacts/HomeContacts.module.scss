@@ -51,25 +51,18 @@
 }
 
 .list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 36px;
   margin-bottom: 40px;
   list-style-type: none;
-
-  @include media-mobile {
-    gap: 16px;
-  }
 
   & li {
     color: var(--white);
 
-    &:first-child, &:nth-child(2) {
-      flex-basis: calc(50% - 18px);
-    }
+    &:not(:last-child) {
+      margin-bottom: 36px;
 
-    &:nth-child(3) {
-      width: 100%;
+      @include media-mobile {
+        margin-bottom: 16px;
+      }
     }
   }
 }
